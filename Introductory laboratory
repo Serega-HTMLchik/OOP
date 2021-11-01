@@ -1,0 +1,34 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+class Kvitancy {
+    int namber;
+    char* data = new char[16];
+    float summ;
+
+public:
+    void SetKvitancy() {
+        cout << "Namber : ";
+        cin >> namber;
+        cout << "Data: ";
+        cin >> data;
+        cout << "Summ: ";
+        cin >> summ;
+    }
+    void GetKvitancy() {
+        cout << endl << setw(42) << namber << endl;
+        cout << setw(32) << "Data: " << setw(10) << data << endl;
+        cout << setw(32) << "Summ: " << setw(10) << summ << endl;
+    }
+};
+
+int main()
+{
+        Kvitancy firstKvit, secondKvit;
+        firstKvit.SetKvitancy();
+        secondKvit.SetKvitancy();
+        firstKvit.GetKvitancy();
+        secondKvit.GetKvitancy();
+        return 0;
+}
