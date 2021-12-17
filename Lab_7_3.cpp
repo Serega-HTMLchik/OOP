@@ -6,7 +6,6 @@ using namespace std;
 
 template <class T>
 void max_t(T x, T y) {
-    cout << "_________________________________" << endl;
     cout << "Вызвана шаблоннная функция" << endl<< endl;
     if(x>y) cout<<"Большее значение: "<<x<<endl;
     else if(y>x) cout<<"Большее значение: "<<y<<endl;
@@ -16,7 +15,6 @@ void max_t(T x, T y) {
 }
 template <>
 void max_t(char* p_ch1, char* p_ch2) {
-    cout << "_________________________________" << endl;
     cout << "Вызвана специальная функция" << endl<< endl;
     if(strcmp(p_ch1, p_ch2) == 0) cout << "Строки одинаковые" << endl;
     else if(strcmp(p_ch1, p_ch2) == 1) cout << " Строка 1 длиннее" << endl;
