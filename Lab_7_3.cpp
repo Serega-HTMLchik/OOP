@@ -6,20 +6,21 @@ using namespace std;
 
 template <class T>
 void max_t(T x, T y) {
-    cout << "  --- ������� ���������� �-� --- " << endl<< endl;
-    if(x>y) cout<<"x: "<<x<<endl;
-		else if(y>x) cout<<"Y: "<<y<<endl;
-		else {cout<<"="<<endl;
-		cout<<"O�� �����: "<<"(x = "<<x<<") = "<<"(y = "<<y<<")"<<endl;
-		}
+    cout << "_________________________________" << endl;
+    cout << "Вызвана шаблоннная функция" << endl<< endl;
+    if(x>y) cout<<"Большее значение: "<<x<<endl;
+    else if(y>x) cout<<"Большее значение: "<<y<<endl;
+    else {cout<<"Большего значения нет!"<<endl;
+    cout<<"Oни равны: "<<"(x = "<<x<<") = "<<"(y = "<<y<<")"<<endl;
+    }
 }
 template <>
 void max_t(char* p_ch1, char* p_ch2) {
     cout << "_________________________________" << endl;
-    cout << "    --- ������� ����. �-� --- " << endl<< endl;
-    if(strcmp(p_ch1, p_ch2) == 0) cout << " ������ ����������" << endl;
-    else if(strcmp(p_ch1, p_ch2) == 1) cout << " ������ 1 �������" << endl;
-    else cout << " ������ 2 �������" << endl;
+    cout << "Вызвана специальная функция" << endl<< endl;
+    if(strcmp(p_ch1, p_ch2) == 0) cout << "Строки одинаковые" << endl;
+    else if(strcmp(p_ch1, p_ch2) == 1) cout << " Строка 1 длиннее" << endl;
+    else cout << "Строка 2 длиннее" << endl;
 }
 
 int main()
@@ -35,3 +36,4 @@ int main()
 
     max_t<char *>(ch1, ch2);
 }
+
